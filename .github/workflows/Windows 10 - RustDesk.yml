@@ -30,11 +30,5 @@ jobs:
       - name: Log In To RustDesk
         run: cmd /c show.bat
 
-      - name: Mantener vivo el runner (CMD)
-        shell: cmd
-        run: |
-          echo Manteniendo activo el entorno...
-          for /l %%i in (1,1,21600) do (
-            echo Esperando %%i segundos
-            timeout /t 1 >nul
-          )
+           - name: Time Counter
+        run: python time.py
